@@ -1,7 +1,11 @@
 on: push
+
 jobs:
-    first-job:
-      runs-on : windows-latest, macos-latest
-      steps :
-            - run : node -- version
-            - run : npm -- version
+  build-and-test:
+    runs-on: ubuntu-latest  # You can change this to the runners you need
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build for deployment
+        run: npm run build  # Adjust based on your build command
