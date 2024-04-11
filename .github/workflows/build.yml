@@ -1,11 +1,25 @@
-on: push
+name: CI/CD for React App
+
+on:
+  push:
+    branches: [ master ]  
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest  # You can change this to the runners you need
+    runs-on: ubuntu-latest  
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3  
+
       - name: Install dependencies
-        run: npm install
+        run: npm install  
+
       - name: Build for deployment
-        run: npm run build  # Adjust based on your build command
+        run: npm run build 
+
+      - name: Deploy (Optional, replace with your deployment steps)
+        uses: actions/deploy-gh-pages@v4 
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  
+          build_dir: ./build 
