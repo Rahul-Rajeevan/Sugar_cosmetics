@@ -20,6 +20,6 @@ jobs:
       - name: Deploy (Optional, replace with your deployment steps)
         uses: actions/deploy-gh-pages@v4 
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: SUGARCOSMETICS
           branch: gh-pages  
           build_dir: ./build 
