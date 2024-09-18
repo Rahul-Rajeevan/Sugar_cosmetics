@@ -1,0 +1,68 @@
+.container{
+    max-width: 1550px;
+    margin: auto;
+}
+.container>div:nth-of-type(1){
+    background-image: url("./Assets/newLaunch.png");
+    background-size: cover;
+    min-height: 2vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    flex-wrap: wrap;
+}
+i{
+    color: white;
+    margin-right: 5px;
+}
+span{
+    margin-right: 10px;
+}
+nav{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    color: white;
+    flex-wrap: wrap;
+}
+nav>div:nth-of-type(1) i{
+    color: black;
+}
+nav img{
+    color: white;
+}
+nav>div:nth-of-type(1)>input{
+    background-color: rgba(36, 36, 36, 0.702);
+    border: 1px solid white;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    width: 400px;
+    color: var(--primary-color);
+}
+nav>div:nth-of-type(1)>input::placeholder{
+    color: gray;
+    padding: 10px;
+}
+nav>div:nth-of-type(1)>*{
+    padding: 10px;
+}
+nav>div:nth-of-type(1)~div>i{
+    margin-right: 15px;
+}
+nav button{
+    background-color: white;
+    border: 1px solid white;
+    border-left: 0;
+    border-radius: 0 10px 10px 0;
+}
+nav+div{
+    color: white;
+    background-color: rgb(20, 20, 20);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
